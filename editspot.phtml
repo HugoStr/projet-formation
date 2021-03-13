@@ -1,0 +1,23 @@
+<div class="edit_spot">
+    <h2>Modifier un spot</h2>
+    <form method="post">
+        <fieldset>
+            <legend>Modifier un spot :</legend>
+            <div class="input-group">
+                <label for="spotname">Nom du spot :</label>
+                <input type="text" name="spotname" value="<?= $spot['spot_name'] ?>">
+            </div>
+            <div class="input-group">
+                <label for="description">Description :</label>
+                <textarea name="description"><?= $spot['spot_description'] ?></textarea>
+            </div>
+            <input type="hidden" name="idspot" value="<?= $spot['id'] ?>" />
+            <div class="input-group">
+                <div class="button">
+                    <input type="submit" value="Modifier" class="valider">
+                    <input type="reset" value="Annuler" class="reset">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

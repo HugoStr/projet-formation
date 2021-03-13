@@ -1,0 +1,45 @@
+<div class="accueil">
+    <p class="intro">Pour le moment j'ai exploré des spots de pêche dans <?= $totalcountries['countriesnumber'] ?> pays, vous pouvez les découvrir en cliquant sur les différents liens ci-dessous :) !</p>
+    <section class="section1">
+        <div class="grid">
+            <a href="show_mexique.php">
+                <div class="img-mexique">
+    		    	<h2>Mexique</h2>
+    			</div>
+            </a>
+        </div>
+        <div class="grid">
+            <a href="show_france.php">
+                <div class="img-france">
+    		    	<h2>France</h2>
+    			</div>
+            </a>
+        </div>
+        <div class="grid">
+            <a href="show_us.php">
+                <div class="img-us">
+    		    	<h2>Etats-Unis</h2>
+    			</div>
+            </a>
+        </div>
+    </section><!--
+    --><section class="section2">
+        <h2>Qui suis-je ?</h2>
+        <img src="img/hugo2.jpg" class="hugo"></img>
+        <p>Lorem ipsum dolor consectetur adipisicing elit. Facere, quibusdam, ipsa, perferendis, quisquam ducimus aut accusamus nihil alias doloribus distinctio veniam quidem omnis voluptas similique cumque minima voluptatem eum qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, expedita, dolorem libero ducimus voluptates vero quibusdam ab fugit tempore explicabo sint alias error ipsum eius molestias quam obcaecati pariatur nesciunt.</p>
+        <h2>Où suis-je ?</h2>
+        <div id="mapid"></div>
+    </section>
+    <?php if(array_key_exists('user', $_SESSION)): ?>
+    <div id="infoposition" class="hidden">
+    </div>
+    <form method="post">
+        <fieldset>
+            <legend>Modifier le lieu :</legend>
+            <label for="place">Où suis-je ?</label>
+            <input type="text" name="place" id="place">
+            <button id="lieu">Modifier ma position</button>
+        </fieldset>
+    </form>
+    <?php endif ?>
+</div>

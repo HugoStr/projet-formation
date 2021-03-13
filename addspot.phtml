@@ -1,0 +1,33 @@
+<div class="add_spot">
+    <h2>Ajouter un nouveau spot</h2>
+    <form method="post">
+        <fieldset>
+            <legend>Nouveau spot :</legend>
+            <div class="input-group">
+                <label for="spotname">Nom du spot :</label>
+                <input type="text" name="spotname">
+            </div>
+            <div class="input-group">
+                <label for="description">Description :</label>
+                <textarea name="description"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="country">Pays :</label>
+                <select name="country" id="country" data-country="1">
+                    <?php foreach ($countries as $country): ?>
+                    <option value="<?= $country['country'] ?>"><?= $country['country'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="region-id" id="countryregions">Région :</label>
+            </div>
+            <div class="input-group">
+                <div class="button">
+                    <input type="submit" value="Enregistrer" class="valider">
+                    <input type="reset" value="Annuler" class="reset">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

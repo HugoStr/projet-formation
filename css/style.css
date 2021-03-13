@@ -1,0 +1,568 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+img{
+	max-width:100%;
+}
+
+body{
+    font-size: 1.6em;
+}
+
+.container{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.intro{
+	font-weight:900;
+	text-transform:uppercase;
+}
+
+.bandeau{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background-image: url(../img/header-lepecheurvoyageur.jpg);
+	background-size:cover;
+	background-position:center;
+	height: 300px;
+	width:100%;
+	margin: 0;
+}
+
+.bandeau h1{
+	color:white;
+	text-shadow: 3px 3px 6px black;
+	font-weight: normal;
+	text-align: center;
+	font-size: 6em;
+	font-family: 'Lobster', cursive;
+}
+
+.connect{
+	display:flex;
+	justify-content:space-between;
+	list-style: none;
+	padding:0;
+	margin: 0;
+}
+
+.connect a {
+	font-family: 'Raleway', cursive;
+	font-size: 1em;
+	color :white;
+	text-shadow: 1px 1px 2px black;
+	text-decoration: none;
+}
+
+header nav{
+	background-color: #344451;
+}
+
+nav .menu{
+	text-align:center;
+	height: 57px;
+	list-style: none;
+	margin: auto;
+	padding: 20px;
+}
+
+nav .menu li{
+	display: inline-block;
+	width:100%;
+	position: relative;
+}
+
+nav .menu a{
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	color:white;
+	font-size:18px;
+	letter-spacing:1px;
+}
+
+nav .sub-menu{
+	width: 100%;
+	display:none;
+	position: absolute;
+	text-align:left;
+	margin-left:45px;
+}
+
+nav .sub-menu li{
+	display: inherit;
+	padding: 7px 0;
+}
+
+nav .sub-menu li:first-child {
+	padding-top:15px;
+}
+
+nav .sub-menu li:last-child {
+	padding-bottom:15px;
+}
+
+.menu li:hover .sub-menu {
+	display:block;
+	background-color: #344451;
+	z-index:1;
+}
+ 
+.menu li:hover ul li {
+ float:none;
+}
+
+/* Footer */
+
+footer{
+	background-color:#344451;
+	color: white;
+	padding-bottom: 40px;
+}
+
+#imgfooter{
+	width:100%;
+}
+
+.footerlist{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+.footerlist li{
+	list-style: none;
+}
+
+footer h3, footer small{
+	display: block;
+	text-align: center;
+}
+
+footer a{
+	text-decoration: none;
+	color:white;
+}
+
+/* Page Index */
+
+.accueil{
+	margin-top: 30px;
+}
+.section1{
+	display:inline-block;
+	width:70%;
+	vertical-align: top;
+	padding-right: 2rem;
+	margin-top:25px;
+}
+
+.section2{
+	display: inline-block;
+	width:30%;
+	vertical-align: top;
+	background-color:#344451;
+	margin:25px 0;
+	padding:15px 41px;
+	color:white;
+	border-radius:15px;
+}
+
+.section1 .grid{
+	margin-bottom:15px;
+}
+
+.section1 .grid h2{
+	text-transform:uppercase;
+	color:white;
+	font-size:4em;
+	letter-spacing:6px;
+	font-family:'Raleway', sans-serif;
+	font-weight:800;
+	text-shadow:3px 3px 6px black;
+	text-decoration:none;
+}
+
+.section1 .grid .img-mexique {
+	background-image:url(../img/mexico.jpg);
+	background-size:cover;
+	background-position:bottom;
+	height:300px;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.section1 a {
+	text-decoration:none;
+}
+
+.section1 .grid:hover {
+	opacity:0.8;
+}
+
+.section1 .grid .img-france {
+	background-image:url(../img/france.jpg);
+	background-position:bottom;
+	background-size:cover;
+	height:300px;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.section1 .grid .img-us {
+	background-image:url(../img/us.jpg);
+	background-size:cover;
+	height:300px;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.section2 h2{
+	text-align: center;
+}
+
+.section2 .hugo{
+	display: block;
+	width:200px;
+	height: 200px;
+	border-radius:50%;
+	margin:auto;
+}
+
+.section2 p{
+	display: block;
+	text-align: justify;
+}
+
+/* Map page d'accueil */
+
+#mapid{ 
+	height: 276px; 
+	width:100%;
+	margin-bottom: 20px;
+}
+
+/* Pages country */
+
+.titlecountry{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	margin: 40px 0px;
+	font-size: 3em;
+}
+
+.introcountry{
+	overflow: hidden;
+	margin : 20px 0px;
+}
+
+.prescountry{
+	float: left;
+	width: 50%;
+	padding-right: 40px;
+	text-align: justify;
+}
+
+.countrymap{
+	float:right;
+	width: 50%;
+	height: 360px;
+}
+
+.countryspots{
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0px;
+}
+
+.imgspot{
+	width: 24%;
+}
+
+.imgspot h2{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	color:black;
+	font-weight:900;
+}
+
+.imgspot a {
+	text-decoration:none;
+}
+
+.imgspot a:hover h2 {
+	color:#344451;
+}
+
+.edit_spot .input-group, .add_spot .input-group, .connexion .input-group {
+	display:inline-block;
+	padding:10px;
+}
+
+/* Pages région */
+
+.titleregion{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	text-transform: capitalize;
+	margin: 40px 0;
+	font-size:45px;
+}
+
+.regionsection1{
+	overflow: hidden;
+	display:block;
+	width:100%;
+	margin: 20px 0;
+}
+
+.regionsection1 p{
+	width:40%;
+	float:left;
+	margin: 0;
+	padding: 0 25px 0 0;
+	text-align:justify;
+}
+
+.regionsection1 img{
+	width:60%;
+	float: right;
+}
+
+.regionsection2{
+	display:block;
+	width: 100%;
+}
+
+.regionsection2 iframe{
+	width:100%;
+}
+
+.regionsection2 .spotlist{
+	display:flex;
+	justify-content: space-between;
+	margin-top:15px;
+}
+
+.regionsection2 .spotlist .spotlistdescription {
+	padding:0 15px;
+	border-right:1px solid black;
+}
+
+.regionsection2 .spotlist .spotlistdescription:last-child {
+	border-right:none;
+}
+
+.regionsection2 .spotlist .spotlistdescription h2 {
+	margin:0;
+}
+
+.regionsection2 p {
+	text-align:justify;
+}
+
+.regionsection3 h3 {
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size:35px;
+	margin: 50px 0;
+}
+
+/* Page de présentation des poissons */
+
+.titlefishes{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	margin: 40px 0px;
+	font-size: 3em;
+}
+
+.fishname{
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	padding-left:5px;
+}
+
+.fishespage .presentation{
+	width: 100%;
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+.fishespage p{
+	text-align: justify;
+}
+
+.circle{
+	float: left;
+	width:200px;
+	height: 200px;
+	border-radius:50%;
+	border: 1px solid black;
+	margin-right: 30px;
+}
+
+.recipebutton{
+	float: right;
+	border-radius:15px;
+	padding:10px;
+	text-transform: uppercase;
+}
+
+.hidden{
+	display: none;
+}
+
+.recipe{
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid black;
+	background-color: #344451;
+	color:white;
+	border-radius:15px;
+}
+
+.recipe i{
+	padding: 5px;
+}
+
+.recipe h2{
+	padding-left: 20px;
+}
+
+.recipe p{
+	padding-left: 20px;
+}
+
+.recipe img{
+	width: 150px;
+	height: 150px;
+	float: right;
+	margin: 20px;
+	border: 1px solid white;
+	border-radius:15px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width:1057px){
+	.menu{
+		display: flex;
+		width:80%;
+	}	
+}
+
+@media screen and (max-width:1056px) {
+	.menu {
+		display: inline-block;
+		width:100%;
+	}
+	
+	.menu li {
+		padding:9px 0;
+	}
+	
+	header nav {
+		padding-bottom:23px;
+	}
+	
+	.section1, .section2 {
+		width:100%;
+	}
+}
+
+@media screen and (max-width:767px) {
+	.circle {
+		float:inherit;
+		margin-left:auto;
+		margin-right:auto;
+		width:300px;
+		height:300px;
+		display:block;
+	}
+	
+	.recipebutton {
+		float:inherit;
+	}
+	
+	.recipe p {
+		padding-right:20px;
+	}
+	
+	.countrymap {
+		width:100%;
+	}
+	
+	.prescountry {
+		width:100%;
+		padding-right:0;
+	}
+	
+	.countryspots {
+		display:inline-block;
+	}
+	
+	.imgspot {
+		width:100%;
+	}
+	
+	.regionsection1 p {
+		width:100%;
+		padding:0 0 25px 0;
+	}
+	
+	.regionsection1 img {
+		width:100%;
+	}
+	
+	.regionsection2 .spotlist {
+		display:inline-block;
+	}
+	
+	.regionsection2 .spotlist .spotlistdescription {
+		border-right:0;
+		padding:0px 15px 26px 0;
+	}
+	
+	.edit_spot .input-group, .add_spot .input-group, .connexion .input-group {
+		display:block;
+	}
+	
+	.footerlist {
+		display:block;
+		text-align:center;
+	}
+	
+	.footerlist li {
+		padding-bottom:7px;
+	}
+}
+
+
+
+
+
+
+
+

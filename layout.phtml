@@ -1,0 +1,82 @@
+<?php if (session_status() === PHP_SESSION_NONE):
+	session_start();
+endif ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>projet</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap|Source+Sans+Pro&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+	    crossorigin=""></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="bandeau">
+				<h1>Le pêcheur voyageur</h1>
+			</div>
+				<nav>
+					<ul class="menu">
+						<li><a href="index.php"><i class="fa fa-home"></i> Accueil</a></li>
+							<ul class="sub-menu">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						<li class="menu-event"><a href="#"><i class="fas fa-globe-americas"></i> Destinations</a>
+							<ul class="sub-menu">
+								<li><a href="show_us.php">Etats-Unis</a></li>
+								<li><a href="show_france.php">France</a></li>
+								<li><a href="show_mexique.php">Mexique</a></li>
+							</ul>
+						</li>
+						<li class="menu-event"><a href="#"><i class="fas fa-fish"></i> Les poissons</a>
+							<ul class="sub-menu">
+								<li><a href="sea_fishes.php">En mer</a></li>
+								<li><a href="freshwater_fishes.php">En eau douce</a></li>
+							</ul>
+						</li>
+						<?php if(array_key_exists('user', $_SESSION)): ?>
+						<li class="menu-event"><a href="add_spot.php"><i class="fas fa-plus"></i> Ajouter un spot</a>
+						</li>
+						<?php endif ?>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<div class="container">
+					<?php include $template . '.phtml' ?>
+				</div>
+			</main>
+		<footer>
+			<img src="img/footer-lepecheurvoyageur.jpg" id="imgfooter"></img>
+			<nav>
+				<h3>Retrouvez-nous sur :</h3>
+				<ul class="footerlist">
+					<li><a href=""><i class="fab fa-facebook-square"></i> Facebook</a></li>
+					<li><a href=""><i class="fab fa-twitter-square"></i> Twitter</a></li>
+					<li><a href=""><i class="fab fa-youtube-square"></i> Youtube</a></li>
+					<li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+				</ul>
+			</nav>
+			<?php if(array_key_exists('user', $_SESSION)): ?>
+			<small><a href="logout.php"><i class="fas fa-user"></i> Déconnexion</a></small>
+			<?php else: ?>
+			<small><a href="login.php"><i class="fas fa-user"></i> Connexion Admin</a></small>
+			<?php endif ?>
+			<small>Le pêcheur voyageur de la 3W Academy</small>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+

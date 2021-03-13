@@ -1,0 +1,6 @@
+<label for="spot-id" id="regionspots">Spots :</label>
+<select name="spot-id">
+    <?php foreach ($regionspots as $regionspot): ?>
+        <option value="<?= $regionspot['id_spot'] ?>"><?= $regionspot['spot_name'] ?></option>
+    <?php endforeach ?>            
+</select>

@@ -1,0 +1,32 @@
+<h1 class='titleregion'>Pêcher à <?= $region['name'] ?> - <?= $region['country'] ?></h1>
+<section class="regionsection1">
+    <p><?= $region['description'] ?></p>
+    <img src="img/<?= $region['img2'] ?>" class="imgregion">
+</section>
+<section class="regionsection2">
+    <iframe src="<?= $region['map'] ?>" width="480" height="360"></iframe>
+    <div class="spotlist">
+        <?php foreach( $spots as $spot ): ?>
+        <div class="spotlistdescription">
+            <h2><?= $spot['spot_name'] ?></h2>
+            <p><?= $spot['spot_description'] ?></p>
+            <?php if(array_key_exists('user', $_SESSION)): ?>
+                <button><a href="edit_spot.php?spotid=<?= $spot['spotid'] ?>"><i class="fas fa-pencil-alt"></i> Modifier le spot</a></button>
+            <?php endif ?>
+        </div>
+        <?php endforeach ?>
+    </div>
+</section>
+<section class="regionsection3">
+    <h3>Découvrez les autres régions :</h3>
+    <div class="countryspots">
+        <?php foreach($otherregions as $otherregion): ?>
+        <div class="imgspot">
+            <a href="show_region.php?name=<?= $otherregion['name'] ?>&country=<?= $otherregion['country'] ?>">
+                <img src="img/<?= $otherregion['img1'] ?>"></img>
+                <h2><?= $otherregion['name'] ?></h2>
+            </a>
+        </div>
+        <?php endforeach ?>
+    </div>
+</section> 

@@ -1,0 +1,22 @@
+<h1 class="titlefishes">Les poissons d'eau douce</h1>
+<p class="intro">Pour l'instant j'ai pêché <?= $freshwaterfishescount['freshwaterfishesnumber'] ?> espèces de poisson en eau douce, voici leur présentation :</p>
+<?php foreach($freshwaterfishes as $freshwaterfish): ?>
+<div class="fishespage">
+    <article class="presentation">
+        <h2 class="fishname"><?= $freshwaterfish['name'] ?></h2>
+        <img src="img/<?= $freshwaterfish['img'] ?>" class="circle"></img>
+        <div class="fishdetail">
+            <p><?= $freshwaterfish['description'] ?></p>
+            <p><?= $freshwaterfish['localisation'] ?></p>
+        </div>
+        <button class="recipebutton" id="<?= $freshwaterfish['name'] ?>">Voir une recette avec ce poisson</button>
+    </article>
+    <article class="recipe hidden" data-index="<?= $freshwaterfish['name'] ?>">
+        <i class="fas fa-times-circle"></i>
+        <img src="img/<?= $freshwaterfish['recipe_img'] ?>"></img>
+        <h2><?= $freshwaterfish['recipe_name'] ?> (<?= $freshwaterfish['country'] ?>)</h2>
+        <p><?= $freshwaterfish['recipe_description'] ?></p>
+    </article>
+</div>
+<?php endforeach ?>
+

@@ -1,0 +1,7 @@
+<label for="region-id" id="countryregions">Région :</label>
+<select name="region-id">
+    <?php foreach ($countryregions as $countryregion): ?>
+        <option value="<?= $countryregion['id'] ?>"><?= $countryregion['name'] ?></option>
+    <?php endforeach ?>            
+</select>
+
